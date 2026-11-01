@@ -61,7 +61,7 @@ const fmtDate = ts => {
   const d = new Date(ts);
   const today = new Date();
   if (d.toDateString() === today.toDateString()) return '今天';
-  const y = new Date(today); y.setDate(today.getDate() - 1);
+  const y = new Date(today); y.setDate(y.getDate() - 1);
   if (d.toDateString() === y.toDateString()) return '昨天';
   return `${d.getMonth() + 1}月${d.getDate()}日`;
 };
